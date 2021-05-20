@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +9,8 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'prueba-tecnica';
   
+  reactForm: FormGroup;
+
   username: string = "";
   email: string = "";
   password: string = "";
@@ -21,6 +24,17 @@ export class AppComponent {
   mensajeErrorPassword: string = "";
   mensajeExito: string = "";
 
+  constructor(private _builder: FormBuilder){
+    this.reactForm = _builder.group({
+      usuario: ['', Validators.required],
+      correo: ['', Validators.compose([Validators.email, Validators.required])],
+      clave: ['', Validators.required],
+    });
+  }
+
+  enviar(values): void{
+    console.log(values);
+  }
 
   ingresaUsername(username:string):void{
     this.username = username;

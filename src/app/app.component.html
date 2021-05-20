@@ -9,7 +9,8 @@
     </div>
     <div class="formulario-elemento">
       <span class="formulario-texto-input">Email:</span>
-      <input type="email" class="formulario-input" placeholder="david@gmail.com" (input)="ingresaEmail($event.target.value)">
+      <input type="email" class="formulario-input" placeholder="david@gmail.com"
+        (input)="ingresaEmail($event.target.value)">
     </div>
     <div class="formulario-elemento">
       <span class="formulario-texto-input">Password:</span>
@@ -32,6 +33,49 @@
     </div>
   </div>
 </div>
+
+
+<div class="contenedor">
+  <div class="titulo">
+    <h1>FORMULARIO REACTIVO</h1>
+  </div>
+  <div class="formulario">
+    <form [formGroup]="reactForm" (ngSubmit)="enviar(reactForm.value)" >
+      <div class="formulario-elemento">
+        <span class="formulario-texto-input">Username:</span>
+        <input type="text" class="formulario-input" placeholder="david5" formControlName="usuario">
+        <div *ngIf="reactForm.get('usuario').hasError('required') && reactForm.get('usuario').touched">Es necesario agregar un username</div>
+      </div>
+      <div class="formulario-elemento">
+        <span class="formulario-texto-input">Email:</span>
+        <input type="email" class="formulario-input" placeholder="david@gmail.com" formControlName="correo">
+        <div *ngIf="reactForm.get('correo').hasError('email') && reactForm.get('correo').touched">Hay un error con el email ingresado</div>
+      </div>
+      <div class="formulario-elemento">
+        <span class="formulario-texto-input">Password:</span>
+        <input type="password" class="formulario-input" placeholder="****" formControlName="clave">
+        <div *ngIf="reactForm.get('clave').hasError('required') && reactForm.get('clave').touched">El password no es válido</div>
+      </div>
+      <div class="formulario-elemento">
+        <button class="formulario-boton" [disabled]="reactForm.invalid">Enviar</button>
+      </div>
+      <div class="formulario-elemento">
+        <p class="mensaje">{{mensajeErrorUsername}}</p>
+      </div>
+      <div class="formulario-elemento">
+        <p class="mensaje">{{mensajeErrorEmail}}</p>
+      </div>
+      <div class="formulario-elemento">
+        <p class="mensaje">{{mensajeErrorPassword}}</p>
+      </div>
+      <div class="formulario-elemento">
+        <p class="mensaje">{{mensajeExito}}</p>
+      </div>
+    </form>
+  </div>
+</div>
+
+
 
 
 <!-- <div class="container">

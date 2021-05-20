@@ -1,6 +1,6 @@
 .contenedor{
     width: 50%;    
-    margin: auto;
+    margin: 3% auto;
     background-color: midnightblue;
     border-radius: 20px;
     color: white;
@@ -60,7 +60,7 @@
     font-weight: 700;
     text-align: center;
 }
-
+  
 /* .centrar{
     text-align: center;
 } */
