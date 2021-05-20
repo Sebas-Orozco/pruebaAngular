@@ -1,0 +1,56 @@
+<div class="contenedor">
+  <div class="titulo">
+    <h1>FORMULARIO DE INGRESO</h1>
+  </div>
+  <div class="formulario">
+    <div class="formulario-elemento">
+      <span class="formulario-texto-input">Username:</span>
+      <input type="text" class="formulario-input" placeholder="david5" (input)="ingresaUsername($event.target.value)">
+    </div>
+    <div class="formulario-elemento">
+      <span class="formulario-texto-input">Email:</span>
+      <input type="email" class="formulario-input" placeholder="david@gmail.com" (input)="ingresaEmail($event.target.value)">
+    </div>
+    <div class="formulario-elemento">
+      <span class="formulario-texto-input">Password:</span>
+      <input type="password" class="formulario-input" placeholder="****" (input)="ingresaPassword($event.target.value)">
+    </div>
+    <div class="formulario-elemento">
+      <button class="formulario-boton" (click)="validar()">Enviar</button>
+    </div>
+    <div class="formulario-elemento">
+      <p class="mensaje">{{mensajeErrorUsername}}</p>
+    </div>
+    <div class="formulario-elemento">
+      <p class="mensaje">{{mensajeErrorEmail}}</p>
+    </div>
+    <div class="formulario-elemento">
+      <p class="mensaje">{{mensajeErrorPassword}}</p>
+    </div>
+    <div class="formulario-elemento">
+      <p class="mensaje">{{mensajeExito}}</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div class="container">
+  <div class="input-group">
+    <span >username</span>
+    <input type="text" class="form-control" placeholder="Username" pattern="[A-Za-z]" (input)="ingresaUsername($event.target.value)">
+  </div>
+
+  <div class="input-group">
+    <span >email</span>
+    <input type="text" class="form-control" placeholder="email" (input)="ingresaEmail($event.target.value)">
+  </div>
+
+  <div class="input-group">
+    <span >password</span>
+    <input type="password" class="form-control" placeholder="password" (input)="ingresaPassword($event.target.value)">
+  </div>
+
+  <div>
+    <button (click)="validar()">Enviar</button>
+  </div>
+</div> -->

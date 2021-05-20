@@ -1,0 +1,96 @@
+.contenedor{
+    width: 50%;    
+    margin: auto;
+    background-color: midnightblue;
+    border-radius: 20px;
+    color: white;
+}
+
+.titulo{
+    text-align: center;
+    padding: 10px 7%;
+    font-size: 1.5vw;
+}
+
+.formulario{
+    margin-left: 10%;
+    margin-right: 10%;
+    /* margin: 1% auto; */
+    padding: 10px 7%;
+}
+
+.formulario-elemento{
+    margin: 2% auto;
+    /* font-size: 1vw; */
+}
+
+.formulario-input{
+    float: right;
+    background-color: white;
+    border: 3px solid transparent;
+    border-radius: 15px;
+}
+
+.formulario-input:focus{
+    outline: none;
+    border-color: royalblue;
+}
+
+.formulario-texto-input{
+    font-size: 150%;
+}
+
+.formulario-boton{
+    display: flex;
+    width: 100px;
+    margin: 40px auto;
+    font-size: 150%;
+    background-color: gray;
+    border-radius: 15px;
+    font-weight: 700;
+    padding: 5px 10px;
+}
+
+.formulario-boton:active{
+    border-color: royalblue;
+}
+
+.mensaje{
+    font-size: 120%;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* .centrar{
+    text-align: center;
+} */
+
+/* .input-group{
+    padding: 1em 2em;
+}
+
+.form-control{
+    margin-left: 2em;
+    float: right;
+}
+
+.container{
+    width: 50%;
+    height: 60%;
+    margin: 10% auto;
+    background-color: blue;
+    padding: 3em 4em;
+    border-radius: 2em;
+}
+
+span{
+    color: white;
+}
+
+button{
+    background-color: white;
+    border-radius: 0.8em;
+    padding: 0.5em 2em;
+    font-size: 1.5em;
+    margin-top: 2em;
+} */
